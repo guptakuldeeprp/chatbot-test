@@ -1,0 +1,171 @@
+{
+  "configSchema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "required": [
+      "commonConfig",
+      "interfaceConfig",
+      "endpointConfig",
+      "pipelineConfig"
+    ],
+    "properties": {
+      "commonConfig": {
+        "type": "object",
+        "required": [
+          "tenantId",
+          "userId",
+          "interfacesInScope",
+          "erpDetails"
+        ],
+        "properties": {
+          "tenantId": {
+            "type": "string"
+          },
+          "userId": {
+            "type": "string"
+          },
+          "interfacesInScope": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "erpDetails": {
+            "type": "object"
+          }
+        }
+      },
+      "interfaceConfig": {
+        "type": "object",
+        "required": [
+          "productName",
+          "entity",
+          "acknowledgeEntity",
+          "integrationEvents",
+          "entityZdocVersion",
+          "integrationType",
+          "enableMonitoring"
+        ],
+        "properties": {
+          "productName": {
+            "type": "string"
+          },
+          "entity": {
+            "type": "string"
+          },
+          "acknowledgeEntity": {
+            "type": "boolean"
+          },
+          "integrationEvents": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "entityZdocVersion": {
+            "type": "string"
+          },
+          "integrationType": {
+            "type": "string"
+          },
+          "enableMonitoring": {
+            "type": "boolean"
+          }
+        }
+      },
+      "endpointConfig": {
+        "type": "object",
+        "required": [
+          "endpointDetails",
+          "authDetails",
+          "schedulingConfig",
+          "encryptionConfig",
+          "recoveryEnabled",
+          "compressionConfig",
+          "endpointType",
+          "inputSchema",
+          "outputSchema"
+        ],
+        "properties": {
+          "endpointDetails": {
+            "type": "object"
+          },
+          "authDetails": {
+            "type": "object"
+          },
+          "schedulingConfig": {
+            "type": "object"
+          },
+          "encryptionConfig": {
+            "type": "object"
+          },
+          "recoveryEnabled": {
+            "type": "boolean"
+          },
+          "compressionConfig": {
+            "type": "object"
+          },
+          "endpointType": {
+            "type": "string"
+          },
+          "inputSchema": {
+            "type": "object"
+          },
+          "outputSchema": {
+            "type": "object"
+          }
+        }
+      },
+      "pipelineConfig": {
+        "type": "object",
+        "required": [
+          "inputDataSamples",
+          "outputDataSamples",
+          "mappingRules",
+          "validationRules",
+          "transformationRules",
+          "orchestrationId",
+          "flowLogic"
+        ],
+        "properties": {
+          "inputDataSamples": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "outputDataSamples": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "mappingRules": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "validationRules": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "transformationRules": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "orchestrationId": {
+            "type": "string"
+          },
+          "flowLogic": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  }
+}
